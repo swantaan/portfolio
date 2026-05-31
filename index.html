@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Christiaan Swanepoel" />
+    <meta property="og:title" content="Christiaan Swanepoel" />
+    <title>Christiaan Swanepoel</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='white'/></svg>">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <nav id="nav">
+        <div class="logo-container">
+            <div class="logo-dot"></div>
+            <span>CS</span>
+        </div>
+        <div class="nav-links">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#tech" class="nav-link">Tech Stack</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button id="themeToggleBtn" class="btn btn-outline" onclick="toggleTheme()"></button>
+        </div>
+    </nav>
+
+    <header id="introContainer">
+        <div id="canvases">
+            <canvas id="particles"></canvas>
+            <canvas id="particlesDot"></canvas>
+        </div>
+
+        <div class="headline-overlay">
+            <div class="headline">
+                <div id="dlmagic">Christiaan Swanepoel</div>
+                <div id="rgraphics">My Portfolio</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="about" class="info-section">
+            <h2 class="section-title">About Me</h2>
+            <div class="info-card">
+                <p>
+                    I am Christiaan Swanepoel, a computer science student and creative developer inspired by
+                    mathematics and good design. I love designing software that is elegant, interactive, and efficient.
+                    My experience spans from small-scale Python scripts to large-scale projects working in teams.
+                </p>
+                <div class="highlight-box">
+                    Current Focus: Completing my honours degree and securing a position as a software developer in the
+                    coming year.
+                </div>
+            </div>
+        </section>
+
+        <section id="tech" class="skills-section">
+            <h2 class="section-title">Tech Stack</h2>
+
+            <div class="skills-grid">
+                <div class="skill-card-container theme-languages">
+                    <div class="skill-card">
+                        <div class="skill-card-sticker">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100" height="100" rx="30" fill="var(--bar-bg)" />
+                                <path d="M30 35L15 50L30 65" stroke="var(--neon-magenta)" stroke-width="8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M70 35L85 50L70 65" stroke="var(--neon-magenta)" stroke-width="8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M55 25L45 75" stroke="var(--neon-silver)" stroke-width="8"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card-title">Languages</h3>
+                        <div class="skill-pills-container">
+                            <span class="skill-pill">JavaScript</span>
+                            <span class="skill-pill">Python</span>
+                            <span class="skill-pill">Bash CLI</span>
+                            <span class="skill-pill">C</span>
+                            <span class="skill-pill">Java</span>
+                            <span class="skill-pill">Assembly</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card-container theme-frontend">
+                    <div class="skill-card">
+                        <div class="skill-card-sticker">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100" height="100" rx="30" fill="var(--bar-bg)" />
+                                <ellipse cx="50" cy="50" rx="35" ry="13" transform="rotate(30 50 50)"
+                                    stroke="var(--neon-pink)" stroke-width="5" />
+                                <ellipse cx="50" cy="50" rx="35" ry="13" transform="rotate(90 50 50)"
+                                    stroke="var(--neon-pink)" stroke-width="5" />
+                                <ellipse cx="50" cy="50" rx="35" ry="13" transform="rotate(150 50 50)"
+                                    stroke="var(--neon-pink)" stroke-width="5" />
+                                <circle cx="50" cy="50" r="7" fill="var(--neon-silver)" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card-title">Front-End</h3>
+                        <div class="skill-pills-container">
+                            <span class="skill-pill">React</span>
+                            <span class="skill-pill">HTML5</span>
+                            <span class="skill-pill">CSS3</span>
+                            <span class="skill-pill">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card-container theme-backend">
+                    <div class="skill-card">
+                        <div class="skill-card-sticker">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100" height="100" rx="30" fill="var(--bar-bg)" />
+                                <path d="M25 35C25 25 75 25 75 35C75 45 25 45 25 35Z" fill="var(--neon-purple)"
+                                    opacity="0.3" stroke="var(--neon-purple)" stroke-width="6" />
+                                <path d="M25 55C25 45 75 45 75 55C75 65 25 65 25 55Z" fill="var(--neon-purple)"
+                                    opacity="0.3" stroke="var(--neon-purple)" stroke-width="6" />
+                                <path d="M25 75C25 65 75 65 75 75C75 85 25 85 25 75Z" fill="var(--neon-purple)"
+                                    opacity="0.3" stroke="var(--neon-purple)" stroke-width="6" />
+                                <path d="M25 35V75" stroke="var(--neon-purple)" stroke-width="6" />
+                                <path d="M75 35V75" stroke="var(--neon-purple)" stroke-width="6" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card-title">Back-End</h3>
+                        <div class="skill-pills-container">
+                            <span class="skill-pill">Node.js</span>
+                            <span class="skill-pill">SQL</span>
+                            <span class="skill-pill">Firebase</span>
+                            <span class="skill-pill">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card-container theme-tools">
+                    <div class="skill-card">
+                        <div class="skill-card-sticker">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100" height="100" rx="30" fill="var(--bar-bg)" />
+                                <rect x="20" y="25" width="60" height="50" rx="10" stroke="var(--neon-silver)"
+                                    stroke-width="6" />
+                                <circle cx="35" cy="40" r="4" fill="var(--neon-pink)" />
+                                <circle cx="50" cy="40" r="4" fill="var(--neon-magenta)" />
+                                <circle cx="65" cy="40" r="4" fill="var(--neon-purple)" />
+                                <path d="M35 55L45 60L35 65" stroke="var(--neon-silver)" stroke-width="5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <line x1="50" y1="65" x2="65" y2="65" stroke="var(--neon-silver)" stroke-width="5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-card-title">Tools &amp; Systems</h3>
+                        <div class="skill-pills-container">
+                            <span class="skill-pill">Linux Systems</span>
+                            <span class="skill-pill">Google Cloud</span>
+                            <span class="skill-pill">Git</span>
+                            <span class="skill-pill">Gen AI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="projects-grid">
+                <div class="project-card-container theme-languages">
+                    <div class="project-card">
+                        <div class="skill-card-sticker">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100" height="100" rx="30" fill="var(--bar-bg)" />
+                                <path d="M30 35L15 50L30 65" stroke="var(--neon-magenta)" stroke-width="8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M70 35L85 50L70 65" stroke="var(--neon-magenta)" stroke-width="8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M55 25L45 75" stroke="var(--neon-silver)" stroke-width="8"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="project-tag">Systems Programming</span>
+                            <h3 class="project-title">Custom Compiler</h3>
+                            <p class="project-desc">
+                                Built a custom language compiler using C that parses structured high-level
+                                syntaxes into optimized assembly code.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card-container theme-frontend">
+                    <div class="project-card">
+                        <div class="skill-card-sticker">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100" height="100" rx="30" fill="var(--bar-bg)" />
+                                <ellipse cx="50" cy="50" rx="35" ry="13" transform="rotate(30 50 50)"
+                                    stroke="var(--neon-pink)" stroke-width="5" />
+                                <ellipse cx="50" cy="50" rx="35" ry="13" transform="rotate(90 50 50)"
+                                    stroke="var(--neon-pink)" stroke-width="5" />
+                                <ellipse cx="50" cy="50" rx="35" ry="13" transform="rotate(150 50 50)"
+                                    stroke="var(--neon-pink)" stroke-width="5" />
+                                <circle cx="50" cy="50" r="7" fill="var(--neon-silver)" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="project-tag">Interactive Design</span>
+                            <h3 class="project-title">Custom Chess</h3>
+                            <p class="project-desc">
+                                Created a custom chess game using Python with an interactive UI. A player can use
+                                trapdoors and walls during the game to change up the gameplay.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card-container theme-backend">
+                    <div class="project-card">
+                        <div class="skill-card-sticker">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100" height="100" rx="30" fill="var(--bar-bg)" />
+                                <rect x="20" y="25" width="60" height="50" rx="10" stroke="var(--neon-silver)"
+                                    stroke-width="6" />
+                                <circle cx="35" cy="40" r="4" fill="var(--neon-pink)" />
+                                <circle cx="50" cy="40" r="4" fill="var(--neon-magenta)" />
+                                <circle cx="65" cy="40" r="4" fill="var(--neon-purple)" />
+                                <path d="M35 55L45 60L35 65" stroke="var(--neon-silver)" stroke-width="5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <line x1="50" y1="65" x2="65" y2="65" stroke="var(--neon-silver)" stroke-width="5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="project-tag">Networking</span>
+                            <h3 class="project-title">Online Communications App</h3>
+                            <p class="project-desc">
+                                Created a secure, real-time online communications application using Java and Tailscale.
+                                The app lets users join VoIP calls, message other users, create groups, and send voice
+                                messages.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card-container theme-tools">
+                    <div class="project-card">
+                        <div class="skill-card-sticker">
+                            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="100" height="100" rx="30" fill="var(--bar-bg)" />
+                                <path d="M50 22L85 37L50 52L15 37Z" stroke="var(--neon-purple)" stroke-width="6"
+                                    stroke-linejoin="round" fill="rgba(135, 40, 106, 0.2)" />
+                                <path d="M32 46V56C32 62 50 68 50 68C50 68 68 62 68 56V46" stroke="var(--neon-purple)"
+                                    stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M50 37C60 37 72 42 74 54" stroke="var(--neon-pink)" stroke-width="4"
+                                    stroke-linecap="round" />
+                                <circle cx="74" cy="58" r="4" fill="var(--neon-pink)" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="project-tag">Data Parsing</span>
+                            <h3 class="project-title">Braille Parser</h3>
+                            <p class="project-desc">
+                                Engineered a high-precision syntax translator and formatter that parses alphanumeric
+                                strings, mathematical notations, and special formats, converting them into standard
+                                Grade-2 Braille dot configurations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact-card" style="max-width: 600px; margin: 0 auto; padding: 40px;">
+                <h3 class="contact-subtitle" style="text-align: center; margin-bottom: 16px;">Let's build something</h3>
+                <p class="contact-text" style="text-align: center; margin-bottom: 24px;">
+                    Reach out to me for any project inquiries or career opportunities through my contacts.
+                </p>
+
+                <div class="contact-links"
+                    style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 16px;">
+                    <a href="mailto:csjakobus@gmail.com" class="contact-link-pill" style="margin: 0;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--neon-pink)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://github.com/swantaan" target="_blank" class="contact-link-pill" style="margin: 0;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--neon-purple)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/christiaan-swanepoel-3b35602aa/" target="_blank"
+                        class="contact-link-pill" style="margin: 0;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--neon-silver)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p>&copy; 2026 Christiaan Swanepoel</p>
+    </footer>
+
+    <script src="./perlin.js"></script>
+    <script src="./particles.js"></script>
+
+    <script>
+        function updateThemeUI() {
+            const isLight = document.body.classList.contains("light-theme");
+
+            if (window.Particles) {
+                window.Particles.bgColor = isLight ? "#dedede" : "#0d0d11";
+            }
+
+            const themeBtn = document.querySelector("#themeToggleBtn");
+            if (themeBtn) {
+                themeBtn.innerHTML = isLight
+                    ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`
+                    : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+            }
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle("light-theme");
+            const isLight = document.body.classList.contains("light-theme");
+            localStorage.setItem("theme", isLight ? "light" : "dark");
+            updateThemeUI();
+        }
+
+        function initTheme() {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "light") {
+                document.body.classList.add("light-theme");
+            } else {
+                document.body.classList.remove("light-theme");
+            }
+            updateThemeUI();
+        }
+
+        function mainLoop() {
+            window.Particles.tick();
+            requestAnimationFrame(mainLoop);
+        }
+
+        function initApp() {
+            initTheme();
+            window.Particles.init();
+
+            document.querySelectorAll('.skill-card-container, .project-card-container').forEach(container => {
+                const card = container.querySelector('.skill-card, .project-card');
+                if (!card) return;
+
+                container.addEventListener('mousemove', (e) => {
+                    const rect = container.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    const percentX = (x / rect.width) - 0.5;
+                    const percentY = (y / rect.height) - 0.5;
+
+                    const maxTilt = 12;
+
+                    const rotateY = percentX * maxTilt;
+                    const rotateX = -percentY * maxTilt;
+
+                    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                });
+
+                container.addEventListener('mouseleave', () => {
+                    card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+                });
+            });
+
+            window.addEventListener("resize", () => {
+                window.Particles.resize();
+            });
+
+            mainLoop();
+        }
+
+        if (document.readyState === "loading") {
+            window.addEventListener("DOMContentLoaded", initApp);
+        } else {
+            initApp();
+        }
+    </script>
+</body>
+
+</html>
